@@ -1,4 +1,4 @@
-const data = [
+/* const data = [
   {
     id: 1,
     title: "The Lord of the Rings",
@@ -139,6 +139,87 @@ function getBooks() {
   return data;
 }
 
+const books = getBooks();
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+books;
+
+const book = getBook(2);
+const title = book.title;
+console.log(title);
+
+const updatedBook = {
+  ...book,
+  pages: 1210,
+};
+
+updatedBook;
+
+const summary = `${title} is a book`;
+summary;
+
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+console.log(x);
+
+const titles = books.map((book) => book.title);
+titles;
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+}));
+books;
+essentialData;
+
+const longBooks = books.filter((book) => book.pages > 500);
+longBooks;
+
+const adventureBooks = books
+  .filter((books) => books.genres.includes("adventure"))
+  .map((book) => book.title);
+adventureBooks;
+
+const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+pagesAllBooks;
+
+const arr = [3, 7, 1, 9, 6];
+//slice() 创建副本
+const sorted = arr.slice().sort((a, b) => a - b);
+arr;
+sorted;
+
+const sortedByPages = books.slice().sort((a, b) => a.pages - b.pages);
+sortedByPages;
+
+const newBook = {
+  id: 6,
+  title: "Harry Potter",
+  author: "J.K",
+};
+//add
+const booksAfterAdd = [...books, newBook];
+booksAfterAdd;
+
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+booksAfterDelete;
+
+const booksAfterUpdate = booksAfterAdd.map((book) =>
+  book.id === 1 ? { ...book, pages: 1210 } : book
+);
+booksAfterUpdate;
+ */
+
+/* fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => console.log(data)); */
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  return data;
+}
+const todos = getTodos();
+console.log(todos);
+console.log("jonas");
