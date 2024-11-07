@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card {
+  border: 4px solid black;
+  margin: px;
+  width: 450px;
+  margin-left: 40px;
+}
+img {
+  width: 450px;
+}
+
+.title {
+  text-align: center;
+}
+
+.data {
+  margin: 20px;
+}
+
+.skill {
+  display: inline;
+  margin: 5px;
+}
